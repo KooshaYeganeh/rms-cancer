@@ -1,0 +1,21 @@
+
+[opensuse]
+python3.11 -m venv venv
+source venv/bin/activate
+python app.py
+
+
+
+
+[debian]
+python3.11 -m venv venv
+source venv/bin/activate
+python app.py
+
+
+[rocky]
+python3.11 -m venv venv
+source venv/bin/activate
+python app.py
+
+
