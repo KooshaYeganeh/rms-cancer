@@ -162,7 +162,7 @@ Thank you to all contributors for their dedication and support in developing thi
     - **GitHub**: [GitHub Profile](https://github.com/KooshaYeganeh)
 
 - **Project Maintainer**: Your Organization
-    - **Contact**: support@healthdiagnosticapp.com
+    - **Contact**: kooshakooshadv@gmail.com
 
 If you are interested in contributing to this project, please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines.
 
@@ -177,7 +177,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## **Contact**
 
 For any questions or support, please contact us:
-- **Email**: kooshakooshadv@gmail.com.com
+- **Email**: kooshakooshadv@gmail.com
 - **GitHub**: Submit a ticket [here](https://github.com/KooshaYeganeh/rms-cancer).
 
 --- 
@@ -186,4 +186,8 @@ For any questions or support, please contact us:
 
 Special thanks to the open-source libraries and datasets that have enabled the creation of this application, including **MONAI**, **scikit-learn**, and the open medical imaging datasets.
 
+## Reources
+
+- Breast Cancar CSV : Breast Cancer Wisconsin (Diagnostic) Data Set
+- Mamo Data : Kaggle : https://www.kaggle.com/datasets/gauravduttakiit/mammography-breast-cancer-detection
 
