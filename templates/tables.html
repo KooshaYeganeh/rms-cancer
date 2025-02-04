@@ -521,6 +521,62 @@
           </div>
         </div>
       </div>
+
+        <div class="card">
+            <div class="card-header bg-gradient-dark text-white">
+                Dataset Overview
+            </div>
+            <div class="card-body">
+                <p><strong>ID Number:</strong> Not present in your data, but often included in similar datasets.</p>
+                <p><strong>Diagnosis (Result):</strong> The target variable, where M = Malignant and B = Benign.</p>
+                
+                <h4>30 Features:</h4>
+                <p>These are computed from the digitized image of the FNA and describe characteristics of the cell nuclei. The features are divided into three groups:</p>
+
+                <ul>
+                    <li><strong>Mean:</strong> The average value of the feature.</li>
+                    <li><strong>Standard Error (SE):</strong> The standard error of the feature.</li>
+                    <li><strong>Worst:</strong> The worst (largest) value of the feature.</li>
+                </ul>
+
+                <h5>Feature Descriptions:</h5>
+                <ul>
+                    <li><strong>Radius:</strong> Mean distance from the center to points on the perimeter.</li>
+                    <li><strong>Texture:</strong> Standard deviation of gray-scale values.</li>
+                    <li><strong>Perimeter:</strong> Perimeter of the tumor.</li>
+                    <li><strong>Area:</strong> Area of the tumor.</li>
+                    <li><strong>Smoothness:</strong> Local variation in radius lengths.</li>
+                    <li><strong>Compactness:</strong> Perimeter² / area - 1.0.</li>
+                    <li><strong>Concavity:</strong> Severity of concave portions of the contour.</li>
+                    <li><strong>Concave Points:</strong> Number of concave portions of the contour.</li>
+                    <li><strong>Symmetry:</strong> Symmetry of the tumor.</li>
+                    <li><strong>Fractal Dimension:</strong> "Coastline approximation" - 1.</li>
+                </ul>
+
+                <h5>Each of these features is provided in three forms:</h5>
+                <ul>
+                    <li><strong>Mean:</strong> Average value across all cells.</li>
+                    <li><strong>Standard Error (SE):</strong> Variability of the feature.</li>
+                    <li><strong>Worst:</strong> Largest value observed.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- radius_mean (میانگین شعاع): میانگین فاصله‌ها از مرکز تومور به پیرامون (شعاع متوسط).
+        texture_mean (میانگین بافت): میانگین بافت تومور، اندازه‌گیری شده به‌عنوان انحراف معیار مقادیر خاکستری.
+        perimeter_mean (میانگین محیط): میانگین محیط تومور.
+        area_mean (میانگین مساحت): میانگین مساحت تومور.
+        smoothness_mean (میانگین نرمی): میانگین نرمی (چقدر سطح تومور صاف است).
+        compactness_mean (میانگین چگالی): میانگین چگالی (معیاری از اینکه نقاط تومور چقدر به مرز شکل نزدیک هستند).
+        concavity_mean (میانگین فرورفتگی): میانگین فرورفتگی (عمق فرورفتگی‌های تومور).
+        concave_points_mean (میانگین نقاط فرورفته): میانگین تعداد نقاط فرورفته (فرورفتگی‌ها) در شکل تومور.
+        symmetry_mean (میانگین تقارن): میانگین تقارن (چقدر تومور متقارن است).
+        fractal_dimension_mean (میانگین ابعاد فراکتالی): میانگین ابعاد فراکتالی (پیچیدگی مرز تومور).
+    
+    سپس، ویژگی‌های دیگری نیز وجود دارند:
+    
+        radius_se, texture_se, perimeter_se, area_se و غیره: این‌ها نمایانگر خطاهای استاندارد ویژگی‌های فوق هستند (که نشان‌دهنده تغییرات یا نویز در اندازه‌گیری‌ها هستند).
+        radius_worst, texture_worst, perimeter_worst, area_worst و غیره: این‌ها نمایانگر بدترین (بیشترین) مقادیر ویژگی‌های فوق هستند که نشان‌دهنده شدیدترین اندازه‌گیری‌ها هستند. -->
       
       
       <footer class="footer py-4  ">
