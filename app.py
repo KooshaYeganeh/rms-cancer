@@ -247,12 +247,12 @@ class ImprovedCNN(nn.Module):
         return x
 
 # Load the trained model
-model = ImprovedCNN().to(device)
-model.load_state_dict(torch.load('best_model_monai_breast_ultrason.pth', map_location=device))
-model.eval()  # Set model to evaluation mode
+ultrason_model = ImprovedCNN().to(device)
+ultrason_model.load_state_dict(torch.load('best_model_monai_breast_ultrason.pth', map_location=device))
+ultrason_model.eval()  # Set model to evaluation mode
 
 # Define transformation (must match the training script)
-transform = transforms.Compose([
+ultrason_transform = transforms.Compose([
     transforms.Resize((224, 224)),
     transforms.ToTensor(),
     transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])
@@ -266,26 +266,24 @@ def predict_mamo_ultrason():
         return jsonify({'error': 'No selected file'}), 400
 
     if file:
-        try:
-            # Open the image file
-            image = Image.open(file).convert('RGB')
+        # Open the image file
+        image = Image.open(file).convert('RGB')
 
-            # Apply transformations
-            image_tensor = transform(image).unsqueeze(0).to(device)
+        # Apply transformations
+        image_tensor = ultrason_transform(image).unsqueeze(0).to(device)
 
-            # Perform prediction
-            with torch.no_grad():
-                outputs = model(image_tensor)
-                _, predicted = torch.max(outputs, 1)
+        # Perform prediction
+        with torch.no_grad():
+            outputs = ultrason_model(image_tensor)
+            _, predicted = torch.max(outputs, 1)
 
-            # Class mapping
-            classes = ['benign', 'malignant', 'normal']
-            result = classes[predicted.item()]
+        # Class mapping
+        classes = ['benign', 'malignant', 'normal']
+        result = classes[predicted.item()]
 
-            return render_template( "mamo_cancer_ultrason.html" , prediction = result )
+        return render_template( "mamo_cancer_ultrason.html" , prediction = result )
 
-        except Exception as e:
-           print (f"error: {str(e)}")
+
 
 
 
